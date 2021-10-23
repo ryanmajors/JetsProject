@@ -1,6 +1,10 @@
 package com.skilldistillery.jets.app;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+
+import com.skilldistillery.jets.entities.AirField;
+import com.skilldistillery.jets.entities.Jet;
 
 public class JetsApplication {
 
@@ -11,19 +15,24 @@ public class JetsApplication {
 	public static void main(String[] args) {
 		JetsApplication jetApp = new JetsApplication();
 		Scanner sc = new Scanner(System.in);
+		ArrayList<Jet> planesInAirfield = new ArrayList<>();
+
 		// launches program from within main
-		jetApp.launch(sc);
+		jetApp.launch(sc, planesInAirfield);
 	}
 
-	private void launch(Scanner sc) {
+	public void launch(Scanner sc, ArrayList<Jet> planesInAirfield) {
+		AirField af = new AirField(planesInAirfield);
+		
 		// adds 5 jets at start of program
+		af.populateAirfield(planesInAirfield);
 
 		// menu of options for user to chose from
 		displayUserMenu();
-		userMenuChoiceSelector(sc);
+		userMenuChoiceSelector(sc, planesInAirfield);
 	}
 
-	private void displayUserMenu() {
+	public void displayUserMenu() {
 		System.out.println("Welcome to Majors International Airport (MIA) \n");
 		System.out.println("Please choose an option from the menu below.\n");
 		System.out.println("1. List planes currently in the fleet");
@@ -38,36 +47,38 @@ public class JetsApplication {
 
 	}
 
-	private void userMenuChoiceSelector(Scanner sc) {
+	public void userMenuChoiceSelector(Scanner sc, ArrayList<Jet> planesInAirfield) {
 		boolean keepGoing = true;
+		ArrayList<Jet> planes = new ArrayList<>();
+		AirField af = new AirField(planesInAirfield);
 		while (keepGoing) {
 			System.out.print("\nEnter the number of the option you would like to perform: ");
 			int choice = sc.nextInt();
 
 			switch (choice) {
 			case 1:
-				viewAllJets();
+				af.viewAllJets(planesInAirfield);
 				break;
 			case 2:
-				flyAllJets();
+				af.flyAllJets();
 				break;
 			case 3:
-				veiwFastestJet();
+				af.veiwFastestJet();
 				break;
 			case 4:
-				veiwLongestRangeJet();
+				af.veiwLongestRangeJet();
 				break;
 			case 5:
-				loadAllCargo();
+				af.loadAllCargo();
 				break;
 			case 6:
-				dogFight();
+				af.dogFight();
 				break;
 			case 7:
-				addJetToFleet();
+				af.addJetToFleet();
 				break;
 			case 8:
-				removeJetFromFleet();
+				af.removeJetFromFleet();
 				break;
 			case 9:
 				System.out.println("\nYou have chosen to leave the airfield and quit the program."
@@ -76,55 +87,6 @@ public class JetsApplication {
 
 			}
 		}
-	}
-
-	private void viewAllJets() {
-		// Test print statement
-		System.out.println("Viewing all jets");
-		
-		
-	}
-
-	private void flyAllJets() {
-		// Test print statement
-		System.out.println("All jets have begun flying!");
-
-	}
-
-	private void veiwFastestJet() {
-		// Test print statement
-		System.out.println("Viewing fastest jet.");
-
-	}
-
-	private void veiwLongestRangeJet() {
-		// Test print statement
-		System.out.println("Viewing longest ranged jet.");
-
-	}
-
-	private void loadAllCargo() {
-		// Test print statement
-		System.out.println("Viewing all jets");
-
-	}
-
-	private void dogFight() {
-		// Test print statement
-		System.out.println("Commencing dogfight!");
-
-	}
-
-	private void addJetToFleet() {
-		// Test print statement
-		System.out.println("Adding jet to fleet.");
-
-	}
-
-	private void removeJetFromFleet() {
-		// Test print statement
-		System.out.println("Removing jet from fleet.");
-
 	}
 
 }

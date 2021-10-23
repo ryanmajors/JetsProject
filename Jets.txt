@@ -1,3 +1,5 @@
-HotAirBalloon, nimbus, 100.2, 300, 1234
-Cargo, Boeing 737, 234, 500, 500000
-Passenger, BoeingMax, 1, 1, 12
+GlideBomber, nimbus, 100.2, 300, 1234
+CargoPlane, Boeing 737, 234, 500, 500000
+FighterJet, BoeingMax, 200, 300, 1200
+FighterJet, F-16, 200, 300, 1200
+FighterJet, F-22, 300, 500, 1200

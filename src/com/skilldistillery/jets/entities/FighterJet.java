@@ -12,4 +12,11 @@ public class FighterJet extends Jet implements CombatReady {
 		
 	}
 
+	@Override
+	public String toString() {
+		return "\nFighterJet" + super.toString() + "]";
+	}
+	
+	
+
 }

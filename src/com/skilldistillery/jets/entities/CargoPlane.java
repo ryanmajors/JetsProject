@@ -12,4 +12,11 @@ public class CargoPlane extends Jet implements CargoCarrier {
 
 	}
 
+	@Override
+	public String toString() {
+		return "\nCargoPlane" + super.toString() + "]";
+	}
+	
+
+	
 }

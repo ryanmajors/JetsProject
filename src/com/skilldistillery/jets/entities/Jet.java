@@ -20,4 +20,11 @@ public abstract class Jet {
 	public double getSpeedInMach() {
 		return speed;
 	}
+
+	@Override
+	public String toString() {
+		return "Jet [model=" + model + ", speed=" + speed + ", range=" + range + ", price=" + price + "]";
+	}
+	
+	
 }

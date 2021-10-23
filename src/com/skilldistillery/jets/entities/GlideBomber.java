@@ -12,4 +12,10 @@ public class GlideBomber extends Jet implements GlideMode {
 
 	}
 
+	@Override
+	public String toString() {
+		return "\nGlideBomber" + super.toString() + "]";
+	}
+	
+
 }
