@@ -8,13 +8,15 @@ public class FighterJet extends Jet implements CombatReady {
 
 	@Override
 	public void fight() {
-		// sysout showing the jet is fighting
-		
+		// getting fighters into postion for fight
+		System.out.println(getModel()+" in position.");
+		System.out.println("");
+
 	}
 
 	@Override
 	public String toString() {
-		return "\nFighterJet" + super.toString() + "]";
+		return "\nFighterJet -" + super.toString();
 	}
 	
 	

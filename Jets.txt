@@ -1,5 +1,5 @@
-GlideBomber, nimbus, 100.2, 300, 1234
+GlideBomber, Batwing, 100.2, 300, 1234
 CargoPlane, Boeing 737, 234, 500, 500000
-FighterJet, BoeingMax, 200, 300, 1200
-FighterJet, F-16, 200, 300, 1200
-FighterJet, F-22, 300, 500, 1200
+FighterJet, F-35, 200, 600, 1100
+FighterJet, F-16, 200, 150, 1200
+FighterJet, F-22, 300, 400, 1300

@@ -8,13 +8,15 @@ public class CargoPlane extends Jet implements CargoCarrier {
 
 	@Override
 	public void loadCargo() {
-		// sysout for cargo being loaded
-
+		// cargo loading statements
+		System.out.println("\nLoading cargo onto the " + getModel() + "...");
+		System.out.println("Cargoloading complete for the " + getModel() + ".");
+		
 	}
 
 	@Override
 	public String toString() {
-		return "\nCargoPlane" + super.toString() + "]";
+		return "\nCargoPlane -" + super.toString();
 	}
 	
 
