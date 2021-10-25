@@ -9,7 +9,6 @@ import java.util.Scanner;
 public class AirField {
 	private ArrayList<Jet> planesInAirfield = new ArrayList<>();
 	private Scanner sc = new Scanner(System.in);
-	private AirField airfield;
 
 	public AirField(ArrayList<Jet> planesInAirfield) {
 		super();
@@ -58,13 +57,11 @@ public class AirField {
 	// cycles through airfield and flies all jets and displays fight time before
 	// refueling
 	public void flyAllJets() {
-		int count = 1;
 		System.out.println("\nFlying all jets...\n");
 		for (Jet jet : planesInAirfield) {
 			System.out.printf(
 					"The " + jet.getModel() + " took off and flew for %.2f hours before circling back to refuel.\n",
 					jet.getRangeHours());
-			count++;
 		}
 		System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 	}
@@ -172,6 +169,7 @@ public class AirField {
 	}
 
 	// removes jet from airfield
+
 	public void removeJetFromFleet(Scanner sc, ArrayList<Jet> planesInAirfield) {
 		System.out.println("\nList of jets in airfield to remove from: ");
 		int count = 1;

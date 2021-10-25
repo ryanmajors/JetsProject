@@ -49,7 +49,6 @@ public class JetsApplication {
 	// processes user choice and calls appropriate method
 	public void userMenuChoiceSelector(Scanner sc, ArrayList<Jet> planesInAirfield) {
 		boolean keepGoing = true;
-		ArrayList<Jet> planes = new ArrayList<>();
 		AirField af = new AirField(planesInAirfield);
 		while (keepGoing) {
 			displayUserMenu();
